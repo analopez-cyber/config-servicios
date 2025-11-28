@@ -1,0 +1,55 @@
+spring:
+  web:
+    cors:
+      enabled: true
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+           - id: servHoteles
+             uri: lb://servicio-hoteles
+             predicates:
+                - Path=/shoteles/**
+             metadata:
+               cors:
+                 '[/**]':
+                 allowedOrigins: "*"
+                 allowedHeaders: "*"
+                 allowedMethods: "*"
+             filters:
+                - RewritePath=/shoteles/*, /
+                - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+           - id: servVuelos
+             uri: lb://servicio-vuelos
+             predicates:
+                - Path=/svuelos/**
+             metadata:
+               cors:
+                 '[/**]':
+                 allowedOrigins: "*"
+                 allowedHeaders: "*"
+                 allowedMethods: "*"
+             filters:
+                - RewritePath=/svuelos/*, /
+                - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+           - id: servReservas
+             uri: lb://servicio-reservas
+             predicates:
+                - Path=/sreservas/**
+             metadata:
+               cors:
+                 '[/**]':
+                 allowedOrigins: "*"
+                 allowedHeaders: "*"
+                 allowedMethods: "*"
+             filters:
+                - RewritePath=/sreservas/*, /
+                - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+server:
+  port: 9000
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://192.168.1.34:8761/eureka
