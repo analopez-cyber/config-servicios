@@ -19,9 +19,6 @@ springdoc:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.1.38:8761/eureka
-  instance:
-    hostname: ${spring.application.name}
-    prefer-ip-address: true          
+      defaultZone: http://192.168.1.38:8761/eureka  
 server:
   port: 8000
