@@ -15,7 +15,6 @@ spring:
     user:
       roles:
         - "ADMINISTRADOR"
-        - "INVITADO"
       name: admin
       password: admin
 springdoc:
