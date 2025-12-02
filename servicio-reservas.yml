@@ -15,7 +15,7 @@ spring:
     user:
       name: admin
       password: admin
-      roles: ADMINISTRADOR
+      roles: ADMIN
 springdoc:
   packages-to-scan:
     - com.ejercicio.controller
