@@ -19,13 +19,14 @@ spring:
 springdoc:
   packages-to-scan:
     - com.ejercicio.controller
-    - com.ejercicio.inicio    
   paths-to-match:
     - /**
 eureka:
   client:
     service-url:
       defaultZone: http://192.168.1.38:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
   instance:
     prefer-ip-address: true
     instance-id: ${spring.application.name}        
