@@ -22,5 +22,7 @@ eureka:
       defaultZone: http://192.168.1.38:8761/ 
   instance:
     prefer-ip-address: true
+    hostname: ${spring.application.name}
+    virtual-host-name: ${spring.application.name}    
 server:
   port: 8000
