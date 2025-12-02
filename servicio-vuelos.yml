@@ -24,7 +24,6 @@ eureka:
     register-with-eureka: true
   instance:
     instance-id: ${spring.application.name}-${spring.application.instance_id:${random.int[0,99]}}
-    prefer-ip-address: true
     hostname: ${spring.application.name}
 server:
   port: 0
