@@ -20,10 +20,11 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.1.38:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true  
   instance:
     instance-id: ${spring.application.name}-${spring.application.instance_id:${random.int[0,99]}}
     prefer-ip-address: true
-    hostname: ${spring.application.name}
-    virtual-host-name: ${spring.application.name}   
+    virtual-host-name: ${spring.application.name}
 server:
   port: 0
