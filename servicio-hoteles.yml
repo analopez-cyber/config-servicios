@@ -24,5 +24,8 @@ eureka:
     register-with-eureka: true
   instance:
     prefer-ip-address: true
+    hostname: ${spring.application.name}
+    virtual-host-name: ${spring.application.name}
+    secure-virtual-host-name: ${spring.application.name}
 server:
   port: 8000
