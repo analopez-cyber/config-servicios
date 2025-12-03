@@ -20,8 +20,8 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.1.33:8761/eureka
-    fetch-registry: true
     register-with-eureka: true
+    fetch-registry: true
   instance:
     instance-id: ${spring.application.name}-${spring.application.instance_id:${random.int[0,99]}}
     hostname: 192.168.1.33
