@@ -52,4 +52,4 @@ eureka:
   client:
     register-with-eureka: false
     service-url:
-      defaultZone: http://192.168.1.38:8761/eureka
+      defaultZone: http://192.168.1.33:8761/eureka
