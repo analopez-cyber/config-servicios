@@ -19,10 +19,10 @@ springdoc:
 eureka:
   client:
     service-url:
-      defaultZone: http://192.168.1.33:8761/ 
+      defaultZone: http://192.168.1.33:8761/
     fetch-registry: true
     register-with-eureka: true
   instance:
-    hostname: ${spring.application.name}    
+    hostname: ${spring.application.name}
 server:
   port: 8000
