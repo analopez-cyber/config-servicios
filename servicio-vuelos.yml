@@ -24,6 +24,6 @@ eureka:
     fetch-registry: true
   instance:
     instance-id: ${spring.application.name}-${spring.application.instance_id:${random.int[0,99]}}
-    hostname: 192.168.1.33
+    hostname: ${spring.application.name}
 server:
   port: 0
