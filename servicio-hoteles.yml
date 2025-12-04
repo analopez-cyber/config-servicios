@@ -20,9 +20,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://192.168.1.33:8761/eureka
-    register-with-eureka: true
-    fetch-registry: true
-  instance:
-    hostname: 192.168.1.33
 server:
   port: 8000
