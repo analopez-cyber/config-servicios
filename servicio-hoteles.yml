@@ -23,7 +23,6 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
   instance:
-    instance-id: ${spring.application.name}
-    hostname: ${spring.application.name}
+    hostname: 192.168.1.33
 server:
   port: 8000
