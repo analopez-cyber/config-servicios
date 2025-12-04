@@ -29,6 +29,7 @@ eureka:
     fetch-registry: true
   instance:
     hostname: ${spring.application.name}
+    instance-id: ${spring.application.name}
     prefer-ip-address: true
 server:
   port: 7000
